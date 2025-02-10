@@ -1,0 +1,42 @@
+
+import json
+
+weather_data = {
+    "cod": "200",
+    "city": {
+        "id": 2643743,
+        "name": "London",
+        "coord": {"lon": -0.1277, "lat": 51.5073},
+        "country": "GB"
+    },
+    "message": 0,
+    "list": [
+        {
+            "dt": 1707504000,
+            "temp": {"day": 10.5, "min": 7.8, "max": 12.1, "night": 8.4, "eve": 9.9, "morn": 7.9},
+            "feels_like": {"day": 8.3, "night": 6.5, "eve": 8.1, "morn": 6.2},
+            "pressure": 1012,
+            "humidity": 85,
+            "weather": [{"id": 500, "main": "Rain", "description": "light rain", "icon": "10d"}],
+            "speed": 5.1,
+            "deg": 220,
+            "clouds": 75,
+            "rain": 2.3
+        },
+        {
+            "dt": 1707590400,
+            "temp": {"day": 11.2, "min": 8.1, "max": 13.0, "night": 9.0, "eve": 10.5, "morn": 8.2},
+            "feels_like": {"day": 9.0, "night": 7.3, "eve": 8.7, "morn": 6.5},
+            "pressure": 1010,
+            "humidity": 80,
+            "weather": [{"id": 801, "main": "Clouds", "description": "few clouds", "icon": "02d"}],
+            "speed": 4.8,
+            "deg": 210,
+            "clouds": 40
+        }
+    ]
+}
+
+with open("weather_data.json", "w") as json_file:
+    json.dump(weather_data, json_file, indent=4)
+
